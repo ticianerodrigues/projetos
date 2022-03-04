@@ -3,32 +3,27 @@
 # O Usuário deve inserir 2 valores
 # O Programa exibe o resultado de acordo com a operação escolida e os valores diferentes
 
+operacao = ""
 
-numero1 = int(input("Digite o primeiro valor: "))
-operacao = input("Digite o operador")
-numero2 = int(input("Digite o segundo valor:"))
+while operacao != "sair":
 
-if operacao == "+":
-  resultado = numero1 + numero2
+  numero1 = int(input("Digite o primeiro valor: "))
+  operacao = input("Digite o operador: ")
+  numero2 = int(input("Digite o segundo valor: "))
 
-elif operacao == "-":
-  resultado = numero1 - numero2
+  if operacao == "+":
+    resultado = numero1 + numero2
 
-elif operacao == "*":
-  resultado = numero1 * numero2
+  elif operacao == "-":
+    resultado = numero1 - numero2
 
-elif operacao == "/":
-  resultado = numero1 / numero2
+  elif operacao == "*":
+    resultado = numero1 * numero2
 
-else:
-  resultado = "Operação inválida"
+  elif operacao == "/":
+    resultado = numero1 / numero2
 
-print(str(numero1) + "" + str(operacao) + "" + str(numero2) + "=" + str (resultado))
-
-
-
-
-
-
-
-
+  else:
+    resultado = "Operação inválida"
+  
+  print(str(numero1) + operacao + str(numero2) + "=" + str(resultado))
